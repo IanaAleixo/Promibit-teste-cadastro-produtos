@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-    <title>Clientes</title>
+    <title>Produtos</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
   
      <!-- Favicons -->
-     <link href="img/logohusky2.png" rel="icon">
+     <link href="img/logo-promobit2.png" rel="icon">
   
      <!-- Google Fonts -->
      <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -28,9 +28,9 @@
      <!-- Template Main CSS File -->
      <link href="assets/css/style.css" rel="stylesheet">
 
-      <!-- jQuery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-   
+     <!-- jQuery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
      <!-- =======================================================
      * Template Name: NiceAdmin - v2.2.0
      * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -46,15 +46,15 @@
    
        <div class="d-flex align-items-center justify-content-between">
          <a href="index.html" class="logo d-flex align-items-center">
-           <img src="img/logohusky2.png" alt="">
-           <span class="d-none d-lg-block">Husky</span>
+           <img src="img/logo-promobit2.png" alt="">
+           <span class="d-none d-lg-block">Promobit</span>
          </a>
          <i class="bi bi-list toggle-sidebar-btn"></i>
        </div><!-- End Logo -->
      </header><!-- End Header -->  
 
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -66,48 +66,53 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#deliveries-nav" data-bs-toggle="collapse" href="#">
-          <i class="ri-motorbike-fill"></i><span>Entregas</span><i class="bi bi-chevron-down ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#products-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-box-seam"></i><span>Produtos</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="deliveries-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="products-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="deliveries.html">
+            <a href="products.html">
               <i class="bi bi-circle"></i><span>Consultar</span>
             </a>
           </li>
           <li>
-            <a href="add-delivery.html">
+            <a href="add-product.html">
               <i class="bi bi-circle"></i><span>Adicionar</span>
             </a>
           </li>
         </ul>
-      </li><!-- End Devileries Nav -->
+      </li><!-- End Products Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#customers-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-people"></i><span>Clientes</span><i class="bi bi-chevron-down ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#tags-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-tag-fill"></i><span>Tags</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="customers-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="tags-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="customers.html">
+            <a href="tags.html">
+              <i class="bi bi-circle"></i><span>Consultar</span>
+            </a>
+          </li>
+          <li>
+            <a href="add-tag.html">
+              <i class="bi bi-circle"></i><span>Adicionar</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tags Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#report-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-graph-up"></i><span>Relatório</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="report-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="report.html">
               <i class="bi bi-circle"></i><span>Consultar</span>
             </a>
           </li>
         </ul>
-      </li><!-- End Customers Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#deliveryman-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-people"></i><span>Entregadores</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="deliveryman-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="deliveryman.html">
-              <i class="bi bi-circle"></i><span>Consultar</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Deliveryman Nav -->
+      </li><!-- End Report Nav -->
 
     </ul>
 
@@ -116,11 +121,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Clientes</h1>
+      <h1>Produtos</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Clientes</li>
+          <li class="breadcrumb-item active">Produtos</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -131,12 +136,21 @@
 
           <div class="card">
             <div class="card-body">
-              <br>
-              <button type="button" class="btn btn-light" onclick="location.href='index.html'"><i class="bi bi-arrow-left-short"></i> Voltar</button>
-              <!-- Table with stripped rows -->
-                <span id="customers"></span>
-              <!-- End Table with stripped rows -->
+            <!-- Edit Form -->
+            <form id="form-edit" method="post">
+                <br>
+                <div class="row mb-3">
+                    <label for="tags" class="col-md-4 col-lg-3 col-form-label">Tags</label>
+                    <div class="col-md-8 col-lg-9">
+                        <span id="select"></span>
+                    </div>
+                </div>
 
+                <div class="text-center">
+                    <button type="submit" id="btn-submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form><!-- End Edit Form -->
+              </div>
             </div>
           </div>
 
@@ -149,7 +163,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>Husky Logística</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Promobit</span></strong>. All Rights Reserved
     </div>
   </footer><!-- End Footer -->
 
@@ -168,14 +182,25 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- List all customers -->
+  <!-- List select options -->
   <script>
     $(document).ready(function (){
-      $.post('CRUD/list_customers.php', function(retorno){
-        $("#customers").html(retorno)
+      $.post('CRUD/select_tags.php', function(retorno){
+        $("#select").html(retorno)
       });
     });
   </script>
+  <!-- List select options-->
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const cod = urlParams.get('cod');
+    console.log(cod)
+    document.getElementById('btn-submit').onclick = function(){
+      document.getElementById('form-edit').action = "CRUD/link_tags.php?cod="+cod;
+    }  
+  </script>
+  
 
 </body>
 

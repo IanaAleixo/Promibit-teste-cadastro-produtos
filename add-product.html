@@ -151,8 +151,7 @@
                     <div class="row mb-3">
                       <label for="tags" class="col-md-4 col-lg-3 col-form-label">Tags</label>
                       <div class="col-md-8 col-lg-9">
-                        <select name="tags" class="form-select" aria-label="Default select example">
-                        </select>
+                          <span id="select"></span>
                       </div>
                     </div>
 
@@ -189,6 +188,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- List select options -->
+  <script>
+    $(document).ready(function (){
+      $.post('CRUD/select_tags.php', function(retorno){
+        $("#select").html(retorno)
+      });
+    });
+  </script>
+  <!-- List select options-->
 
 </body>
 
